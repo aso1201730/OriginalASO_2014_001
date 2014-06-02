@@ -32,21 +32,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			switch(ran){
 			case 0:
 				intent = new Intent(MainActivity.this, DaikichiActivity.class);
-				startActivity(intent);
 				break;
 			case 1:
 				intent = new Intent(MainActivity.this, ChuukichiActivity.class);
-				startActivity(intent);
 				break;
 			case 2:
 				intent = new Intent(MainActivity.this, kyouActivity.class);
-				startActivity(intent);
 				break;
 			case 3:
 				intent = new Intent(MainActivity.this, DaikyouActivity.class);
-				startActivity(intent);
 				break;
 			}
+			intent.putExtra("name", inputMsg);
+
+			startActivity(intent);
+
 
 		}
 	}
